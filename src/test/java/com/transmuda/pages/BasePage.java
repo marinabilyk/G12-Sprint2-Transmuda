@@ -5,6 +5,7 @@ package com.transmuda.pages;
 
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -97,6 +98,43 @@ public abstract class BasePage {
         } catch (Exception e) {
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
+        }
+    }
+
+    public void moduleIsDisplayed(String module){
+        MainModulesPage_MB mainModulesPageMb = new MainModulesPage_MB();
+        switch (module) {
+            case "dashboard":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Dashboard module is not displayed", mainModulesPageMb.dashboardsModule.isDisplayed());
+                break;
+            case "fleet":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Fleet module is not displayed", mainModulesPageMb.fleetModule.isDisplayed());
+                break;
+            case "customers":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Customers module is not displayed", mainModulesPageMb.customersModule.isDisplayed());
+                break;
+            case "sales":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Sales module is not displayed", mainModulesPageMb.salesModule.isDisplayed());
+                break;
+            case "activities":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Activities module is not displayed", mainModulesPageMb.activitiesModule.isDisplayed());
+                break;
+            case "marketing":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Marketing module is not displayed", mainModulesPageMb.marketingModule.isDisplayed());
+                break;
+            case "reports & segments":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("Reports & segments module is not displayed", mainModulesPageMb.reportsSegmentsModule.isDisplayed());
+                break;
+            case "system":
+                waitUntilLoaderScreenDisappear();
+                Assert.assertTrue("System module is not displayed", mainModulesPageMb.systemModule.isDisplayed());
         }
     }
 
