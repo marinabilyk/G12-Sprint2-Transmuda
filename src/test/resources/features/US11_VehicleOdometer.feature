@@ -8,8 +8,8 @@ Feature: Default
 
   @B34G12-133
   Scenario Outline: US11AC1 Sales and Store manager error message verification
-    Given user is logged in as <"userType">
-    When user is on <"pageSubtitle">
+    Given user is logged in as "<userType>"
+    When user is on "<pageSubtitle>"
     And user hover over Fleet
     And user Selects Vehicle odometer
     Then user should see error message on screen
