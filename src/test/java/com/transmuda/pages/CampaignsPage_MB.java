@@ -1,9 +1,12 @@
 package com.transmuda.pages;
 
 import com.transmuda.utilities.Driver;
+import org.checkerframework.checker.units.qual.C;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CampaignsPage_MB {
     public CampaignsPage_MB(){
@@ -33,4 +36,31 @@ public class CampaignsPage_MB {
     public WebElement filterOptionBudget;
 
 
+    public static void uncheckFilterCheckbox(String checkboxName){
+
+        CampaignsPage_MB campaignsPageMb = new CampaignsPage_MB();
+
+        switch (checkboxName) {
+            case "Name":
+                campaignsPageMb.filterOptionName.click();
+                Assert.assertFalse(campaignsPageMb.filterOptionName.isSelected());
+                break;
+            case "Code":
+                campaignsPageMb.filterOptionCode.click();
+                Assert.assertFalse(campaignsPageMb.filterOptionCode.isSelected());
+                break;
+            case "Start Date":
+                campaignsPageMb.filterOptionStartDate.click();
+                Assert.assertFalse(campaignsPageMb.filterOptionStartDate.isSelected());
+                break;
+            case "End Date":
+                campaignsPageMb.filterOptionEndDate.click();
+                Assert.assertFalse(campaignsPageMb.filterOptionEndDate.isSelected());
+                break;
+            case "Budget":
+                campaignsPageMb.filterOptionBudget.click();
+                Assert.assertFalse(campaignsPageMb.filterOptionBudget.isSelected());
+                break;
+        }
+    }
 }

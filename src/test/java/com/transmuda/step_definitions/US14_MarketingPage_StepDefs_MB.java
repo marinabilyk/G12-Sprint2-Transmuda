@@ -60,4 +60,10 @@ public class US14_MarketingPage_StepDefs_MB extends BasePage {
     public void userClicksOnFiltersButtonMb() {
         campaignsPageMb.showFilters.click();
     }
+
+    @Then("user clicks on {string} checkbox and sees it is unchecked")
+    public void userClicksOnCheckboxAndSeesItIsUnchecked(String checkboxName) {
+
+        CampaignsPage_MB.uncheckFilterCheckbox(checkboxName);
+    }
 }

@@ -16,3 +16,13 @@ Feature: Marketing page filters
       | userType      |
       | store manager |
       | sales manager |
+
+
+  Scenario: Checkboxes can be checked
+    Given the user logged in as "store manager"
+    When user navigates to Campaigns page MB
+    And user clicks on Filters button MB
+    And user clicks on Manage filters drop down MB
+    Then user clicks on "Name" checkbox and sees it is unchecked
+    And user clicks on "Budget" checkbox and sees it is unchecked
+
