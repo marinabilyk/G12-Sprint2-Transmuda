@@ -7,6 +7,7 @@ Feature: Default
     When User is on Accounts page
     Then User should be able to see filter name options below
       | Account Name  |
+      | Contact Name  |
       | Contact Email |
       | Contact Phone |
       | Owner         |

@@ -1,9 +1,11 @@
 package com.transmuda.pages;
 
 import com.transmuda.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,17 +17,17 @@ public class AccountsPage extends BasePage{
     }
 
 
-    @FindBy(xpath = "//div[@class='filter-item oro-drop']/div[@class='btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value']")
-    public List<WebElement> filterOptions;
+    @FindBy(xpath = "//div[@class='filter-container']/div/ul/li/label/span")
+    public List<WebElement> filterNames;
 
-    public static List<String> getFilterOptions(List<WebElement> list) {
-        List<String> getFilterOptions = new ArrayList<>();
+    @FindBy(xpath = "//div[@class='filter-container']/button")
+    public WebElement manageFilters;
 
-        for (WebElement option : list) {
-            getFilterOptions.add(option.getText());
-        }
-        return getFilterOptions;
+    @FindBy(xpath = "//select[@data-action='add-filter-select']")
+    public WebElement dropdown;
+
+    
     }
 
-}
+
 

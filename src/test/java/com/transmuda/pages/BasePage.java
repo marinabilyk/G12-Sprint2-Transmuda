@@ -38,6 +38,9 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+    @FindBy(xpath = "//a[@title='Filters']")
+    public WebElement filterIcon;
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
