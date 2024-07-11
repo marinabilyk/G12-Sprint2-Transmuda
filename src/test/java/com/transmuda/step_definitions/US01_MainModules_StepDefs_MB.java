@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.NoSuchElementException;
 
-public class US131_MainModules_StepDefs extends BasePage {
+public class US01_MainModules_StepDefs_MB extends BasePage {
     MainModulesPage_MB mainModulesPageMb = new MainModulesPage_MB();
 
 

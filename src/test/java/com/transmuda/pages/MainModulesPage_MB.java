@@ -33,4 +33,7 @@ public class MainModulesPage_MB {
 
     @FindBy(xpath = "//span[contains(., 'System')]")
     public WebElement systemModule;
+
+    @FindBy(xpath = "//span[.='Campaigns']")
+    public WebElement campaignsSubModule;
 }
