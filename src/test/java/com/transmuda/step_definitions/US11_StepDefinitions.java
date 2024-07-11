@@ -10,15 +10,6 @@ public class US11_StepDefinitions {
     public void user_is_on_the_login_page() {
 
 
-    }
-    @Given("user is logged in as <{string}>")
-    public void user_is_logged_in_as(String userType) {
-
-
-    }
-    @When("user is on <{string}>")
-    public void user_is_on(String Dashboard) {
-
 
     }
     @When("user hover over Fleet")
@@ -57,8 +48,12 @@ public class US11_StepDefinitions {
     public void userShouldSeeViewPerPageByDefault(int arg0) {
     }
 
+    @Given("user is logged in as {string}")
+    public void userIsLoggedInAs(String arg0) {
+        
+    }
 
-
-
-
+    @When("user is on {string}")
+    public void userIsOn(String arg0) {
+    }
 }
