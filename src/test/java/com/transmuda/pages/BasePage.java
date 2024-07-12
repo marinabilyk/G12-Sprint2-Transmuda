@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class BasePage {
+public abstract class BasePage {
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -40,17 +40,6 @@ public class BasePage {
 
     @FindBy(xpath = "//a[@title='Filters']")
     public WebElement filterIcon;
-
-    @FindBy(xpath = "//div[text() = \"You do not have permission to perform this action.\"]")
-    public WebElement permissionErrorMessage;
-
-    @FindBy(xpath = "//input[@value = '1']")
-    public WebElement defaultPageNumber;
-
-    @FindBy(xpath = "//button[@class= \"btn dropdown-toggle \"]")
-    public WebElement viewsPerPage;
-
-
 
 
     public BasePage() {
