@@ -78,9 +78,11 @@ public class US04_StepDefinitions extends BasePage {
 
         BrowserUtils.waitFor(1);
 
-        contractsPage.errorMessage.getText();
+        String expectedMessage = "You do not have permission to perform this action.";
+        String actualMessage = contractsPage.errorMessage.getText();
 
 
+        Assert.assertEquals(expectedMessage,actualMessage);
 
 
 
