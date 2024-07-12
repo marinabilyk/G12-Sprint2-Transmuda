@@ -9,13 +9,12 @@ import org.junit.runner.RunWith;
         plugin = {
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
-                "json:target/cucumber.json"
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
         glue = "com/transmuda/step_definitions",
         dryRun = true,
-        tags = "@B34G12-147",
+        tags = "",
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
