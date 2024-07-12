@@ -16,15 +16,6 @@ public class US03_StepDefs {
     LoginPage loginPage = new LoginPage();
     PinbarPage pinbarPage = new PinbarPage();
 
-    @Given("the user is logged in")
-    public void theUserIsLoggedIn() {
-        loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
-    }
-
-    @And("the user is on the homepage")
-    public void theUserIsOnTheHomepage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("homepageUrl"));
-    }
 
     @When("the user clicks the {string} link")
     public void theUserClicksTheLink(String linkText) {

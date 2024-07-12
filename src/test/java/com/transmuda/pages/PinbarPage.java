@@ -33,10 +33,4 @@ public class PinbarPage {
         return Driver.getDriver().findElement(By.xpath("//img[@src='" + src + "']"));
     }
 
-    public void loginAsTruckDriver() {
-        LoginPage loginPage = new LoginPage();
-        loginPage.login();
-
-    } //Remove this if unnecessary
-
 }
