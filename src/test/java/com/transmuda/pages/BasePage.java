@@ -43,6 +43,13 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[contains(., 'Calendar Events')]")
     public WebElement calendarEventsButton;
+    @FindBy(xpath = "(//span[contains(., 'Fleet')])[1]")
+    public WebElement fleetModule;
+
+
+    @FindBy (xpath = "//span[contains(.,'Vehicle Contracts')]")
+    public WebElement vehicleContractsButton;
+
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
