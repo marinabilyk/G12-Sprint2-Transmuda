@@ -46,6 +46,8 @@ public abstract class BasePage {
     @FindBy(xpath = "(//span[contains(., 'Fleet')])[1]")
     public WebElement fleetModule;
 
+    @FindBy(xpath = "//li//a//span[.='Vehicles']")
+    public WebElement vehiclesButton;
 
     @FindBy (xpath = "//span[contains(.,'Vehicle Contracts')]")
     public WebElement vehicleContractsButton;
