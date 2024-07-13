@@ -1,28 +1,24 @@
 package com.transmuda.step_definitions;
 
-import com.transmuda.pages.CalendarEventsPage;
-import com.transmuda.utilities.BrowserUtils;
+import com.transmuda.pages.CreateCalendarEventPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import javax.sql.rowset.BaseRowSet;
+public class CLONE_US08_StepDefinitions {
 
-public class US08_StepDefinitions {
-
-    CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
+    CreateCalendarEventPage createCalendarEventPage = new CreateCalendarEventPage();
 
     @Given("{string} is on Calendar Event page")
     public void is_on_calendar_event_page(String userType) {
 
-        calendarEventsPage.navigateToModule("Activities","Calendar Events");
+        createCalendarEventPage.navigateToModule("Activities","Calendar Events");
     }
 
     @When("User click to Create Calendar Event")
     public void user_click_to_create_calendar_event() {
 
-        BrowserUtils.waitForVisibility(calendarEventsPage.calendarEvent, 5);
-        calendarEventsPage.calendarEvent.click();
+
 
     }
 
