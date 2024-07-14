@@ -13,7 +13,6 @@ import org.openqa.selenium.WebElement;
 
 public class US03_StepDefs {
 
-    LoginPage loginPage = new LoginPage();
     PinbarPage pinbarPage = new PinbarPage();
 
 
