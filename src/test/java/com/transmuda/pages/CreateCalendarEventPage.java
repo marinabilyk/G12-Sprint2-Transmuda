@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CreateCalendarEventPage {
+public class CreateCalendarEventPage extends BasePage{
 
     public CreateCalendarEventPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -18,5 +18,6 @@ public class CreateCalendarEventPage {
 
     @FindBy(xpath = "(//input[contains(@data-related-field,'interval')])[1]")
     public WebElement repeatEveryButton;
+
 
 }

@@ -15,8 +15,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class US04_StepDefinitions extends BasePage {
 
-
-
     VehicleContractsPage contractsPage = new VehicleContractsPage();
 
 

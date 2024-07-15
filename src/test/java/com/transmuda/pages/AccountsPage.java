@@ -26,6 +26,9 @@ public class AccountsPage extends BasePage{
     @FindBy(xpath = "//select[@data-action='add-filter-select']")
     public WebElement dropdown;
 
+    @FindBy(xpath = "//div[@class='actions-panel pull-right form-horizontal']/div/a[1]")
+    public WebElement filterIcon;
+
     
     }
 

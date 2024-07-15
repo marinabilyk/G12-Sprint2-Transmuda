@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US07CloneStepDefs extends BasePage {
-
     VehiclesPage vehiclesPage = new VehiclesPage();
     @When("User clicks Fleet tab")
     public void user_clicks_fleet_tab() {

@@ -4,7 +4,6 @@ Feature: Default
   Background:
 		#@B34G12-144
     Given the user logged in as "sales manager"
-
   @B34G12-143
   Scenario Outline: US09AC01TC01 Verify user sees Error message when invalid integer is entered into Calendar Repeat every input box
     When User clicks Activities tab and Calendar Events module

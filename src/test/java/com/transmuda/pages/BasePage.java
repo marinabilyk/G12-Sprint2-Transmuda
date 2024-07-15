@@ -53,6 +53,7 @@ public abstract class BasePage {
     public WebElement vehicleContractsButton;
 
 
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }

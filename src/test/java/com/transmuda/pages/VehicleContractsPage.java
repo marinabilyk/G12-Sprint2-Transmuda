@@ -17,7 +17,4 @@ public class VehicleContractsPage {
     @FindBy(xpath = "//div[@class='message']")
     public WebElement errorMessage;
 
-
-
-
 }
