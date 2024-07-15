@@ -24,9 +24,9 @@ public class LoginPage {
     public WebElement submit;
 
 
-    public void login(String user1, String UserUser123) {
-        userName.sendKeys(user1);
-        password.sendKeys(UserUser123);
+    public void login(String usernameStr, String passwordStr) {
+        userName.sendKeys(usernameStr);
+        password.sendKeys(passwordStr);
         submit.click();
         // verification that we logged
     }

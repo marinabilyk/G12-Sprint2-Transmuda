@@ -1,3 +1,24 @@
-/target/
-/.idea/
-/*.iml
+# Ignore specific files and directories
+com/transmuda/pages/AccountsPage
+com/transmuda/pages/BasePage
+com/transmuda/pages/CalendarEventsPage
+com/transmuda/pages/CreateCalendarEventPage
+com/transmuda/pages/LoginPage
+com/transmuda/pages/VehicleContractsPage
+com/transmuda/pages/VehiclesPage
+
+com/transmuda/runners/CukesRunner
+com/transmuda/runners/FailedTestRunner
+
+com/transmuda/step_definitions/*
+!com/transmuda/step_definitions/US03_StepDefs
+
+# Explicitly include hooks to avoid being ignored by the above wildcard
+!com/transmuda/step_definitions/Hooks
+
+# Ignore all files in the specified directories except for US03_StepDefs
+com/transmuda/step_definitions/*
+!com/transmuda/step_definitions/US03_StepDefs
+
+# Ignore the entire utilities folder
+com/transmuda/utilities/*

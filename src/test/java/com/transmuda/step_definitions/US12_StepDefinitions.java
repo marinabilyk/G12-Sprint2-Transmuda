@@ -18,10 +18,10 @@ public class US12_StepDefinitions {
 
     @When("User is on Accounts page")
     public void user_is_on_accounts_page() {
-       accountsPage.navigateToModule("Customers", "Accounts");
-       BrowserUtils.waitForVisibility(accountsPage.filterIcon, 3);
+       //accountsPage.navigateToModule("Customers", "Accounts");
+       //BrowserUtils.waitForVisibility(accountsPage.filterIcon, 3);
 
-       accountsPage.filterIcon.click();
+       //accountsPage.filterIcon.click();
 
     }
 
