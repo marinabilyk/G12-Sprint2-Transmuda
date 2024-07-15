@@ -1,13 +1,22 @@
 package com.transmuda.step_definitions;
 
 import com.transmuda.pages.BasePage;
+import com.transmuda.pages.CalendarEventsPage;
 import com.transmuda.pages.CreateCalendarEventPage;
 import com.transmuda.utilities.BrowserUtils;
+import com.transmuda.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.devtools.idealized.Events;
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.Calendar;
 
 public class US09_StepDef extends BasePage{
 
+    CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
     CreateCalendarEventPage createCalendarEventPage = new CreateCalendarEventPage();
 
     @When("User clicks Activities tab and Calendar Events module")
@@ -16,12 +25,12 @@ public class US09_StepDef extends BasePage{
         activitiesTab.click();
         calendarEventsButton.click();
         BrowserUtils.waitFor(1);
-    }
 
+    }
     @When("User clicks on Create Calendar Event button")
     public void user_clicks_on_create_calendar_event_button() {
 
-        createCalendarEventPage.create_calendar_event_button.click();
+        calendarEventsPage.create_calendar_event_button.click();
         BrowserUtils.waitFor(2);
     }
     @When("User clicks on Repeat button")

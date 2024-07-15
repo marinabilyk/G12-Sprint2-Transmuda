@@ -1,5 +1,6 @@
 package com.transmuda.step_definitions;
 
+import com.transmuda.pages.CalendarEventsPage;
 import com.transmuda.pages.CreateCalendarEventPage;
 import com.transmuda.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
@@ -9,32 +10,32 @@ import org.junit.Assert;
 
 public class CLONE_US08_StepDefinitions {
 
-    CreateCalendarEventPage createCalendarEventPage = new CreateCalendarEventPage();
+    CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
 
     @Given("{string} is on Calendar Event page")
     public void is_on_calendar_event_page(String userType) {
 
-        createCalendarEventPage.waitUntilLoaderScreenDisappear();
-        createCalendarEventPage.navigateToModule("Activities","Calendar Events");
+        calendarEventsPage.waitUntilLoaderScreenDisappear();
+        calendarEventsPage.navigateToModule("Activities","Calendar Events");
     }
 
     @When("User click to Create Calendar Event")
     public void user_click_to_create_calendar_event() {
 
-        BrowserUtils.waitForVisibility(createCalendarEventPage.create_calendar_event_button, 5);
-        createCalendarEventPage.create_calendar_event_button.click();
+        BrowserUtils.waitForVisibility(calendarEventsPage.create_calendar_event_button, 5);
+        calendarEventsPage.create_calendar_event_button.click();
 
     }
 
     @When("Select Repeat checkbox")
     public void select_repeat_checkbox() {
 
-        createCalendarEventPage.repeatCheckbox.click();
+        calendarEventsPage.repeatCheckbox.click();
     }
     @Then("User should see {string} in Repeat Every inputbox")
     public void user_should_see_in_repeat_every_inputbox(String value) {
 
-        Assert.assertEquals(value, createCalendarEventPage.valueRepeatEvery.getAttribute("value"));
+        Assert.assertEquals(value, calendarEventsPage.valueRepeatEvery.getAttribute("value"));
 
     }
 

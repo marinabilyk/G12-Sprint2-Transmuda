@@ -2,7 +2,8 @@ Feature: Default
 
 	Background:
 		#@B34G12-144
-		Given the user logged in as "<userType>"
+		Given the user logged in as "sales manager"
+
 
 
 	@B34G12-166

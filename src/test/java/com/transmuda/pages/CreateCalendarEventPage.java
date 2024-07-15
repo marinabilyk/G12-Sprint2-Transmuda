@@ -19,14 +19,5 @@ public class CreateCalendarEventPage extends BasePage{
     @FindBy(xpath = "(//input[contains(@data-related-field,'interval')])[1]")
     public WebElement repeatEveryButton;
 
-    @FindBy(xpath = "//a[@title ='Create Calendar event']")
-    public WebElement create_calendar_event_button;
-
-    @FindBy(id = "recurrence-repeat-view1244")
-    public WebElement repeatCheckbox;
-
-    @FindBy(id = "//label[@class='fields-row']/input[3]")
-    public WebElement valueRepeatEvery;
-
 
 }
