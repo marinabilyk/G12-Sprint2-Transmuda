@@ -4,8 +4,6 @@ Feature: Default
 	Background:
 		#@B34G12-158
 		Given the user is on the login page
-		
-		
 
 	@B34G12-145
 	Scenario Outline: US04-TC01 Verify Store managers and Sales managers access the Vehicle contracts page

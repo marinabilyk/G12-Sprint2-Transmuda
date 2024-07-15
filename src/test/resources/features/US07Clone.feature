@@ -3,9 +3,8 @@ Feature: Default
 	Background:
 		#@B34G12-144
 		Given the user logged in as "<userType>"
-		
 
-	
+
 	@B34G12-166
 	Scenario: TC01_CLONE - US07_Verify user can select any car on Vehicles page
 		When User clicks Fleet tab

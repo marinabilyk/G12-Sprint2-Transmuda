@@ -16,8 +16,8 @@ public class US09_StepDef extends BasePage{
         activitiesTab.click();
         calendarEventsButton.click();
         BrowserUtils.waitFor(1);
-
     }
+
     @When("User clicks on Create Calendar Event button")
     public void user_clicks_on_create_calendar_event_button() {
 

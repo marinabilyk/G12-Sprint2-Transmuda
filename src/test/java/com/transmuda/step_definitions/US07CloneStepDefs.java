@@ -26,11 +26,9 @@ public class US07CloneStepDefs {
 
     @When("User unchecks first checkbox")
     public void user_unchecks_first_checkbox() {
-
     }
 
     @Then("User selects a random car")
     public void user_selects_a_random_car() {
-
     }
 }
