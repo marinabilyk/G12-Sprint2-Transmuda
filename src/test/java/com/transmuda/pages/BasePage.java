@@ -5,6 +5,7 @@ package com.transmuda.pages;
 
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -114,6 +115,13 @@ public abstract class BasePage {
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
         }
+    }
+
+    public void errorMessageIsDisplayed(String expectedErrorMessage){
+        WebElement errorMessageElement = Driver.getDriver().findElement(By.xpath(
+                "//div[@class='message' and contains(., '" + expectedErrorMessage + "')]"));
+        String actualMessage = errorMessageElement.getText();
+        Assert.assertEquals(expectedErrorMessage, actualMessage);
     }
 
 }
