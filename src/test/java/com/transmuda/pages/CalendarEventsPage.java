@@ -13,10 +13,16 @@ public class CalendarEventsPage extends BasePage{
     @FindBy(xpath = "//a[@title ='Create Calendar event']")
     public WebElement create_calendar_event_button;
 
-    @FindBy(id = "recurrence-repeat-view1244")
+    @FindBy(xpath = "//input[contains(@id,'recurrence-repeat-')]")
     public WebElement repeatCheckbox;
 
-    @FindBy(id = "//label[@class='fields-row']/input[3]")
+    @FindBy(xpath = "//div[@data-name='recurrence-daily']//label/input[@value='1']")
     public WebElement valueRepeatEvery;
+
+    @FindBy(xpath = "//div[@data-name='recurrence-daily']//span//span/span")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//a[contains(@title, 'event')]")
+    public WebElement linkCreateCalendarEvent;
 
 }
