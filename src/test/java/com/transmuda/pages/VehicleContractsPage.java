@@ -14,7 +14,7 @@ public class VehicleContractsPage {
 
 
 
-    @FindBy(xpath = "//div[@class='message']")
+    @FindBy(xpath = "//div[.='You do not have permission to perform this action.']")
     public WebElement errorMessage;
 
 }
