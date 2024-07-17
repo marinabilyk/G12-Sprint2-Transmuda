@@ -19,5 +19,11 @@ public class CreateCalendarEventPage extends BasePage{
     @FindBy(xpath = "(//input[contains(@data-related-field,'interval')])[1]")
     public WebElement repeatEveryButton;
 
+    @FindBy(id = "tinymce")
+    public WebElement descriptionInputField;
+
+    @FindBy(xpath = "//iframe[contains(@id, 'oro_calendar_event_form_description')]")
+    public WebElement descriptionIframe;
+
 
 }
