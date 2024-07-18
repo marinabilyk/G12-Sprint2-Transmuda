@@ -42,13 +42,7 @@ public class CreateCalendarEventPage extends BasePage {
     @FindBy(name = "oro_calendar_event_form[title]")
     public WebElement titleField;
 
-    @FindBy(xpath = "//span[contains(@class, 'simplecolorpicker')]/span[11]")
-    public WebElement colorRed;
-
-    @FindBy(xpath = "//span[contains(@class, 'simplecolorpicker')]/span[8]")
-    public WebElement colorYellow;
-
-    @FindBy(xpath = "//a[@class='btn add-list-item']")
+    @FindBy(xpath = "//a[@class='btn add-list-item']/i")
     public WebElement reminders;
 
     @FindBy(name = "oro_calendar_event_form[reminders][1][method]")
@@ -57,9 +51,41 @@ public class CreateCalendarEventPage extends BasePage {
     @FindBy(xpath = "//input[contains(@id, 'oro_calendar_event_form_reminders_1_interval_number')]")
     public WebElement remindersDurationField;
 
-    @FindBy(xpath = "//input[contains(@id, ' oro_calendar_event_form_reminders_2_interval_unit')]")
+    @FindBy(xpath = "//select[@name='oro_calendar_event_form[reminders][1][interval][unit]']")
     public WebElement remindersIntervalDropdown;
 
+    @FindBy(xpath = "//div[contains(@class, 'control-group-datetime')][2]//input[@placeholder='Choose a date']")
+    public WebElement endDate;
+
+    @FindBy(xpath = "//div[contains(@class, 'control-group-datetime')][2]//input[@placeholder='time']")
+    public WebElement endTime;
+
+    @FindBy(xpath = "//span[contains(@class, 'simplecolorpicker')]/span[11]")
+    public WebElement colorRed;
+
+    @FindBy(xpath = "//span[contains(@class, 'simplecolorpicker')]/span[8]")
+    public WebElement colorYellow;
+
+    @FindBy(xpath = "//div[contains(@class,'responsive-cell-no-blocks')]")
+    public WebElement emptyBlock;
+
+    @FindBy(css = ".recurrence-repeats__select")
+    public WebElement repeatsDropdown;
+
+    @FindBy(xpath = "//span[@class='recurrence-subview-control__text' and .='After']/../input")
+    public WebElement afterRadioBtnOfRepeat;
+
+    @FindBy(xpath = "//input[@data-related-field='occurrences']")
+    public WebElement afterOccurrencesInputOfRepeat;
+
+    @FindBy(xpath = "//input[@id='s2id_autogen1']")
+    public WebElement contextInput;
+
+    @FindBy(xpath = "//li[contains(@class, 'select2-result-selectable select2-highlighted')]/div")
+    public WebElement testAccountContextSelect;
+
+    @FindBy(xpath = "//button[contains(@class,'btn-success')]")
+    public WebElement saveAndCloseBtn;
 
 
     public void clickOnCheckbox(String checkboxName) {
