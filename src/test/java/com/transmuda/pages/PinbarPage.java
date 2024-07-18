@@ -33,4 +33,5 @@ public class PinbarPage {
         return Driver.getDriver().findElement(By.xpath("//img[@src='" + src + "']"));
     }
 
+
 }

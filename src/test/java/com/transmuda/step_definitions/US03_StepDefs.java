@@ -34,4 +34,5 @@ public class US03_StepDefs {
         WebElement image = pinbarPage.getImageElement(expectedSrc);
         Assert.assertTrue("Image not found", image.isDisplayed());
     }
+
 }

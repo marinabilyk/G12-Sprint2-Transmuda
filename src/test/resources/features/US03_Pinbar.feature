@@ -14,3 +14,4 @@ Feature: Learn how to use pinbar
     And the user should see an image with source "/bundles/oronavigation/images/pinbar-location.jpg"
 
 
+
