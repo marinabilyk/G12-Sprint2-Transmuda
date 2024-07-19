@@ -29,13 +29,5 @@ public class VehiclesPage {
     public WebElement editInfoIcons;
 
 
-
-
-    @FindBy (xpath = "(//ul[@class='dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu'])[1]")
-    public WebElement dropDownIcons;
-
-
-
-
 }
 
