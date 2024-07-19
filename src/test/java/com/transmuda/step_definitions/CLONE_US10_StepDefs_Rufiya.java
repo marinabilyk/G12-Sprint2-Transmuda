@@ -33,5 +33,7 @@ public class CLONE_US10_StepDefs_Rufiya {
 
         Assert.assertEquals(calendarEventsPage.descriptionInput.getText(), message);
 
+        Driver.getDriver().switchTo().defaultContent();
+
     }
 }
