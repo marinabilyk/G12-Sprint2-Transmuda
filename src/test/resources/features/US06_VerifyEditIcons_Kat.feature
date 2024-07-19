@@ -4,14 +4,12 @@ Feature: Default
 		
 
 	@B34G12-191
-	Scenario Outline: Verify users can see edit car info icons from the Vehicle page
-		Edit car info icons from Vehicle page
+	Scenario Outline:
 		
 		Given the user logged in as "<userType>"
 		When the user navigates to Fleet module
 		And the user selects on Vehicles
-		And user hovers the mouse over edit icons
-		Then user sees edit info icons
+		Then user hovers the mouse over three dots and see edit info icons
 
 		Examples:
 		      | userType      |
