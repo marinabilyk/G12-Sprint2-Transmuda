@@ -1,14 +1,13 @@
 package com.transmuda.step_definitions;
 
 import com.transmuda.pages.CalendarEventsPage;
-import com.transmuda.pages.CreateCalendarEventPage;
 import com.transmuda.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class CLONE_US08_StepDefinitions {
+public class CLONE_US08_StepDefs_Rufiya {
 
     CalendarEventsPage calendarEventsPage = new CalendarEventsPage();
 

@@ -7,9 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.security.PublicKey;
+import java.util.List;
 import java.util.Set;
 
-public class VehiclesPage {
+public class VehiclesPage extends BasePage{
 
     public VehiclesPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -24,4 +25,15 @@ public class VehiclesPage {
     @FindBy(xpath = "//tbody[@class='grid-body']//tr")
     public Set<WebElement> gridBody;
 
+    @FindBy(xpath = "//table[@class='grid table-hover table table-bordered table-condensed']")
+    public WebElement table;
+
+    @FindBy(xpath = "//a[@class='grid-header-cell__link']")
+    public List<WebElement> headers;
+
+    @FindBy(xpath = "//button[@data-toggle='dropdown']/input")
+    public WebElement firstCheckBox;
+
+
+    
 }
