@@ -25,4 +25,19 @@ public class CalendarEventsPage extends BasePage{
     @FindBy(xpath = "//a[contains(@title, 'event')]")
     public WebElement linkCreateCalendarEvent;
 
+    @FindBy(linkText = "General Information")
+    public WebElement generalInformation;
+
+    @FindBy(xpath = "//div[contains(@class,'filter-criteria-selector')][1]")
+    public WebElement titleFilter;
+
+    @FindBy(xpath = "//tbody[@class='grid-body']/tr/td[2]")
+    public WebElement newEvent;
+
+    @FindBy(xpath = "//div[@class='value-field-frame']/input")
+    public WebElement titleFilterInput;
+
+    @FindBy(xpath = "//a[@title='Filters']")
+    public WebElement showFiltersBtn;
+
 }
