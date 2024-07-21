@@ -40,4 +40,9 @@ public class CalendarEventsPage extends BasePage{
     @FindBy(xpath = "//a[@title='Filters']")
     public WebElement showFiltersBtn;
 
+    @FindBy(xpath = "//div[@class='controls']//iframe")
+    public WebElement iframeDescription;
+
+    @FindBy(id = "tinymce")
+    public WebElement descriptionInput;
 }
