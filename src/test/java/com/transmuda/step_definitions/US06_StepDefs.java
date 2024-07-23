@@ -29,30 +29,18 @@ public class US06_StepDefs extends BasePage {
 
     }
 
-
-    @Then("user sees edit info icons")
-    public void userSeesEditInfoIcons() {
-
-        String actualIcons = vehiclesPage.editInfoIcons.getAttribute("class");
-
-        String expectedIcons = "dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu";
-
-        Assert.assertEquals(actualIcons, expectedIcons);
-    }
-
-
     @Then("user hovers the mouse over three dots and see edit info icons")
     public void userHoversTheMouseOverThreeDotsAndSeeEditInfoIcons() {
 
-        BrowserUtils.hover(vehiclesPage.editInfoIcons);
+        BrowserUtils.hover(vehiclesPage.editInfoIcons); //Three dots
 
         BrowserUtils.waitFor(2);
 
-        String actualDots = vehiclesPage.editInfoIcons.getAttribute("class");
+        String actualEditIcons = vehiclesPage.editInfoIcons.getAttribute("class");
 
-        String expectedDots = "dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu";
+        String expectedEditIcons = "dropdown-menu dropdown-menu__action-cell launchers-dropdown-menu";
 
-        Assert.assertEquals(actualDots, expectedDots);
+        Assert.assertEquals(actualEditIcons, expectedEditIcons);
     }
 }
 
